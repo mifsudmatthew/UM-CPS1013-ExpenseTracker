@@ -1,0 +1,18 @@
+.tableDivMargin{ /* Setting the margin for the division containing the table */
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.inputBoxMargin{ /* Setting the margin for the division containing input fields*/
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.spacing{ /* Used as a divider between two divisions*/
+  margin-top:1%;
+}
+th{ /* Centring all table headers */
+  text-align: center;
+}
+td{ /* Centring all table data */
+  text-align: center;
+  vertical-align: middle;
+}

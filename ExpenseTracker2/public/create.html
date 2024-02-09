@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">  <!-- Specifying the language code of the page -->
+
+<head>
+
+  <meta charset="utf-8">  <!--Setting a character set to be used by the page -->
+
+  <title>Create</title> <!-- Setting the title of the webpage to "Create"-->
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> <!--Making use of Bootstrap CSS -->
+
+  <link rel="stylesheet" href="css/main.css"> <!-- Making use of main.css file -->
+
+</head>
+
+<body>
+
+  <div class="py-5 text-center"> <!--Setting the top margin to the largest default spacing offered by Bootstrap, and centring all contents within the division -->
+    <h1 class="display-5 fw-light">Create</h1><!-- Setting the title of the page to have a heading size, 'display-5' and setting the font weight to light, 'fw-light'-->
+    <p class="py-4 lead text-muted">Add a new expense</p> <!-- Setting the top margin to the 4th largest default spacing, formatting the text to a style 'lead' and color 'text-muted'-->
+  </div>
+
+  <form action = "/addExpense" method = "POST"> <!--Setting the form to post data on route, /addExpense -->
+
+    <div class="inputBoxMargin py-5 border bg-light text-center"> <!-- Spacing the left and right margin by 25%, the top margin is set to the 4th largest default spacing,the division is given a border and a light gray background 'bg-light' and its contents are centred -->
+      <div class="py-4"> <!-- Setting the top margin to the 4th largest default spacing-->
+        <label> <!-- Creating a label as a title for the input field-->
+          Item Name:
+          <input class="form-control" type="text" id="item_name" name = "item_name"  pattern = "[a-zA-z0-9]{1,15}" maxlength = "15"  required> <!-- Creating an input field with a specific ID -->
+        </label>
+      </div>
+      <div class="py-4"><!-- Setting the top margin to the 4th largest default spacing-->
+        <label><!-- Creating a label as a title for the input field-->
+          Item Cost:
+          <input class="form-control" type="number" id="item_cost" name = "item_cost" min="0.01" max="999999999999999" step = "0.01" required>  <!-- Creating a numeric input field with a specific ID and minimum value of 0-->
+        </label>
+      </div>
+    </div>
+
+    <div class="py-2 text-center"> <!--Setting the top margin to the 2nd largest default spacing offered by Bootstrap and centring all contents within the division-->
+      <button class="btn btn-primary" type="submit">Add</button> <!--Creating a button to send form data to the server -->
+      <button class="btn btn-secondary" type="button" onclick="location.href = '/'">Return</button><!-- Creating a button to redirect the user back to the main page -->
+    </div>
+
+  </form>
+
+  <script src="bootstrap/js/bootstrap.js"></script> <!--Making use of Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script> <!--Making use of 'main.js' file -->
+
+</body>
+
+</html>

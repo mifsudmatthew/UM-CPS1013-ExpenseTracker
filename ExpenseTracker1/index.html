@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en"> <!-- Specifying the language code of the page -->
+
+<head>
+
+  <meta charset="utf-8">  <!--Setting a character set to be used by the page -->
+
+  <title>Expense Tracker</title> <!-- Setting the title of the webpage to "Expense Tracker"-->
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> <!--Making use of Bootstrap CSS -->
+
+  <link rel="stylesheet" href="css/main.css"> <!-- Making use of main.css file -->
+
+</head>
+
+<body onLoad=updateTable()><!-- When the main page is loaded the updateTable() function is executed in order to update the status of the table -->
+
+<div class="py-5 text-center"><!--Setting the top margin to the largest default spacing offered by Bootstrap, and centring all contents within the division -->
+  <h1 class="display-5 fw-light">Expense Tracker</h1><!-- Setting the title of the page to have a heading size, 'display-5' and setting the font weight to light, 'fw-light'-->
+  <p class="py-4 lead text-muted">Developed by Matthew Mifsud</p><!-- Setting the top margin to the 4th largest default spacing, formatting the text to a style 'lead' and color 'text-muted'-->
+</div>
+
+<div class="tableDivMargin py-5 border bg-light"><!-- Spacing the left and right margin by 15%, the top margin is set to the 4th largest default spacing, and giving the division a border and a light gray background 'bg-light' -->
+
+  <table id="expenseTable" class="table table-striped table-hover">
+    <!-- Creating a table, giving it a striped design 'table-striped' and a hover mechanism 'table-hover' -->
+    <tr> <!-- Creating a new table row -->
+      <th>#</th> <!-- Setting the table header of the entry/expense index -->
+      <th>Item</th>  <!-- Setting the table header of the entry/expense item name -->
+      <th>Price</th>  <!-- Setting the table header of the entry/expense item price -->
+      <th>Update/Delete</th>  <!-- Setting the table header of the entry/expense update and delete buttons -->
+    </tr>
+  </table>
+</div>
+
+<!-- Creating a paragraph element to be used by 'main.js' to display the total cost of all expenses,
+ Setting font weight to bold 'fw-bold', using 'spacing' to create a gap between the table and the total,
+ Using the same margin spacing as the table and giving the total a border as well as a light gray background colour  -->
+<p class="fw-bold spacing tableDivMargin border bg-light" id="total"></p>
+
+<div class="py-2 text-center"> <!--Setting the top margin to the 2nd largest default spacing offered by Bootstrap and centring all contents within the division-->
+  <button class="btn btn-primary" type="button" onclick="location.href = 'create.html'">Create</button> <!-- Creating a button to redirect user to the 'create.html' page -->
+</div>
+
+<script src="bootstrap/js/bootstrap.js"></script> <!--Making use of Bootstrap JavaScript -->
+
+<script src="js/main.js"></script>  <!--Making use of 'main.js' file -->
+
+</body>
+
+</html>
+
+
+
+
